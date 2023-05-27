@@ -13,7 +13,7 @@ resource "aws_elasticsearch_domain" "example" {
   }
 
   tags = {
-    Domain = "TestDomain"
+    Domain = "TestDomain1"
   }
 }
 
