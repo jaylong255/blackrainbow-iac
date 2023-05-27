@@ -3,7 +3,7 @@ resource "aws_elasticsearch_domain" "example" {
   elasticsearch_version = "7.10"
 
   cluster_config {
-    instance_type = "t2.small.elasticsearch"
+    instance_type = "t2.small.search"
     dedicated_master_enabled = false
     instance_count = 1
     ebs_options {
