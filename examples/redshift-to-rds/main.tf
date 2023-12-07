@@ -2,9 +2,9 @@
 
 terraform {
   backend "s3" {
-    bucket = "cyber-terraform-state-us-east-1"
+    bucket = "cyber-terraform-state-us-east-2"
     key    = "blackrainbow-iac/examples/redshift-to-rds/terraform.tfstate"
-    region = "us-east-1"
+    region = "us-east-2"
   }
   required_version = ">= 1.4.5"
   required_providers {
@@ -16,8 +16,7 @@ terraform {
 }
 
 provider "aws" {
-  region     = "us-east-1"
+  region     = var.aws_region
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
-
 }
