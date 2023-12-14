@@ -1,0 +1,21 @@
+version: "3.5"
+services:
+
+  php-cli:
+    build: 
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+      target: cli
+    command: php artisan serve --host=0.0.0.0
+    working_dir: /app
+    volumes:
+      - .:/app
+    networks:
+      - laravel-network
+    ports:
+      - 8000:8000
+
+networks:
+  laravel-network:
+    driver: bridge
+
